@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Bernard MT Condensed';
+            text-align: center;
+            font-size: 25px;
+            min-height: 250px;
+            background-image: url('https://media3.giphy.com/media/3ohze3cqkv058SUy2s/200.webp?cid=ecf05e47pbvdu43cbswi0dyawbez50ngpgon5l3gkjvfayel&rid=200.webp');
+            background-color: #000000;
+            background-size: 200vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'New Tegomin', serif;
+
+            }
+
+        .container{
+            text-align: center;
+            padding: 20px;
+            height: 100vh;
+            color: black;
+            }
+        .page title{
+            color: #ffffff;
+            margin: 0 0 5px;
+            }
+        .page-subtitle{
+            color: #ffffff;
+            margin-top: 5px;
+            }
+        .page-logo{
+            width: 200px;
+            }
+        .alura-logo{
+            width: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .hahaha{
+
+            color: #3f3;
+            animation-duration: 8s;
+            animation-name:cor_fonte;
+            animation-iteration-count: infinite;  
+        }
+        a{
+            font-size: 20px;
+            text-align:center ;
+            font-family: 'New Tegomin', serif;
+            animation-duration: 2s;
+            animation-name:brilho;
+            animation-iteration-count: infinite;
+            text-decoration: none;
+            color: white;
+        }
+        .imge{
+            width: 20px;
+            height: 20px;
+        }
+        @keyframes cor_fonte{  
+            0, 100%{color: #0ff}
+            25%{color: #f0f}
+            50%{color:#06f}
+            75%{color:#fff}
+        }
+        @keyframes brilho{
+            50%{text-shadow: 0px 0px 9px}
+            
+        }
+        .pp{ 
+            font-size: 20px;
+            font-family: 'New Tegomin', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de moedas
+         </h1>
+    <p class="page-subtitle">
+          Quer saber qual é o valor de dólar U$ em reais R$?
+         </p>
+  Insira o valor</p>
+  <input type="number" id="valorDolar" placeholder="Valor em dólar" name="valorDolar"><br>
+  <button class="botao">Converter</button>  
+                  <h2 class="resultado"></h2>
+    <a href="https://alura.com.br/" target="_blank">
+         <img src="https://cdn.sanity.io/images/mcq3inxc/production/c470608065e6c0a5a2e01d21821c429189175f1b-300x139.png?w=250&h=116&fit=crop" alt="" class="alura-logo">
+          </a>
+          <section class="hahaha">
+            <p class="pp">Kenji Rocha Nakajima</p>
+            <a href="https://github.com/kenjirn">
+                <img class="imge" src="https://www.flaticon.com/svg/vstatic/svg/214/214513.svg?token=exp=1618071820~hmac=b036d6a575295a82d135de3f7acb7d49"> < GitHub >
+              </a>
+          <a href="https://www.instagram.com/kenjirn/">
+            <img class="imge" src="https://www.flaticon.com/svg/vstatic/svg/179/179328.svg?token=exp=1618072543~hmac=8101df888522b9a28e070f5f9311dc27"> < Instagram >
+          </a>
+          <a href="https://www.linkedin.com/in/kenjinakajima/">
+            <img class="imge" src="https://www.flaticon.com/svg/vstatic/svg/145/145807.svg?token=exp=1618072621~hmac=b99187139e3bd3af1118beee713677f0"> < Linkedin >
+          </a>
+        </section>
+<script>
+    const botao = document.querySelector('button')
+      botao.onclick = () => {
+    let valorDolar = Number(document.querySelector('input').value.replace(',','.'))
+        document.querySelector('h2').innerHTML = 'R$ '+(valorDolar * 5.5).toFixed(2)
+}
+</script>
+</body>
+</html>
